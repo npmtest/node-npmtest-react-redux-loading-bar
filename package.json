@@ -1,1 +1,39 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-react-redux-loading-bar",     "homepage": "https://github.com/npmtest/node-npmtest-react-redux-loading-bar",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-react-redux-loading-bar.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### basic test coverage for  [react-redux-loading-bar (v2.8.1)](https://github.com/mironov/react-redux-loading-bar)  [![npm package](https://img.shields.io/npm/v/npmtest-react-redux-loading-bar.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-react-redux-loading-bar) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-react-redux-loading-bar.svg)](https://travis-ci.org/npmtest/node-npmtest-react-redux-loading-bar)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-react-redux-loading-bar",
+    "keywords": [
+        "coverage",
+        "test",
+        "react-redux-loading-bar"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_react_redux_loading_bar.js",
+    "name": "npmtest-react-redux-loading-bar",
+    "nameAlias": "npmtest_react_redux_loading_bar",
+    "nameOriginal": "npmtest-react-redux-loading-bar",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-react-redux-loading-bar.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
